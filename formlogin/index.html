@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form with JSX</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <style>
+    body {
+      background-color: #001f3f; /* Navy Blue */
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: #001f3f; /* Navy Blue */
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 15px;
+      margin-right: 50px;
+      border: 1px solid #001f3f;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #001f3f; /* Navy Blue */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <div id="loginForm"></div>
+
+  <script type="text/babel">
+    function LoginForm() {
+      return (
+        <form>
+          <h2>Login</h2>
+          <div>
+            <label>Username:</label>
+            <input type="text" name="username" />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input type="password" name="password" />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+      );
+    }
+
+    ReactDOM.render(<LoginForm />, document.getElementById('loginForm'));
+  </script>
+</body>
+</html>
